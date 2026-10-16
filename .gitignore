@@ -1,0 +1,196 @@
+
+# ============================================================
+# SQL BACKUP RESTORE + POWER BI + SSIS BENCHMARK
+# Git Ignore Configuration
+# ============================================================
+
+# ------------------------------------------------------------
+# 1. OS / EDITOR FILES
+# ------------------------------------------------------------
+.DS_Store
+._*
+__MACOSX/
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ------------------------------------------------------------
+# 2. SECRETS AND ENVIRONMENT CONFIGURATION
+# ------------------------------------------------------------
+.env
+.env.*
+!.env.example
+
+*.secret
+*.secrets
+*.credentials
+secrets/
+credentials/
+private/
+*.pfx
+*.p12
+*.pem
+*.key
+*.snk
+*.publishsettings
+
+# Local environment configuration
+config/local/
+config/*local*.json
+config/*local*.xml
+appsettings.Development.json
+appsettings.Local.json
+
+# ------------------------------------------------------------
+# 3. SQL SERVER DATABASE BACKUPS AND DATA
+# ------------------------------------------------------------
+*.bak
+*.trn
+*.dif
+*.mdf
+*.ndf
+*.ldf
+*.bacpac
+*.dacpac
+
+# Database dumps and generated exports
+*.dump
+*.sql.gz
+backups/
+backup/
+DBBACKUP/
+database-backups/
+
+# ------------------------------------------------------------
+# 4. SQL SERVER TEMPORARY OUTPUTS
+# ------------------------------------------------------------
+*.sqlplan
+*.query.sql
+*.rpt
+*.xel
+*.xem
+*.mdmp
+*.dmp
+
+# ------------------------------------------------------------
+# 5. SSIS BUILD OUTPUTS
+# ------------------------------------------------------------
+**/bin/
+**/obj/
+**/.vs/
+**/.dtproj.user
+**/*.dtproj.user
+**/*.suo
+**/*.user
+**/*.sln.docstates
+
+# SSIS deployment artifacts
+*.ispac
+*.dtsConfig.local
+*.dtsx.bak
+
+# IMPORTANT:
+# Do NOT ignore *.dtsx or *.dtproj.
+# They are reusable SSIS source files.
+
+# ------------------------------------------------------------
+# 6. POWER BI GENERATED FILES AND CACHES
+# ------------------------------------------------------------
+*.pbix
+*.pbit
+*.abf
+
+# Power BI local caches
+**/.pbi/cache.abf
+**/.pbi/localSettings.json
+**/.pbi/**/cache.abf
+
+# IMPORTANT:
+# Keep PBIP project source files, including:
+# *.pbip
+# *.Report/
+# *.SemanticModel/
+
+# ------------------------------------------------------------
+# 7. EXCEL BENCHMARK TEST DATA
+# ------------------------------------------------------------
+*.xlsx
+*.xls
+*.xlsm
+*.xlsb
+*.csv.tmp
+
+# Keep small example templates if required
+!examples/**/*.xlsx
+!samples/**/*.xlsx
+
+# ------------------------------------------------------------
+# 8. GENERATED BENCHMARK OUTPUT
+# ------------------------------------------------------------
+results/generated/
+benchmark-output/
+benchmark-results/raw/
+**/Logs/
+**/logs/
+*.log
+*.etl
+*.trace
+
+# ------------------------------------------------------------
+# 9. POWERSHELL TEMPORARY FILES
+# ------------------------------------------------------------
+*.ps1.bak
+*.ps1.before_debug.bak
+*.ps1.tmp
+*.ps1.old
+*.tmp
+*.temp
+
+# ------------------------------------------------------------
+# 10. OFFICE DEPLOYMENT TOOL
+# ------------------------------------------------------------
+OfficeDeployment/setup.exe
+OfficeDeployment/officedeploymenttool*.exe
+OfficeDeployment/downloads/
+OfficeDeployment/cache/
+
+# ------------------------------------------------------------
+# 11. LOCAL LAB OUTPUT AND PRE-MIGRATION BACKUPS
+# ------------------------------------------------------------
+PreMigration/
+ACE_PreInstall/
+SSIS_x86_Run_*.log
+SSIS_x64_Run_*.log
+
+# ------------------------------------------------------------
+# 12. PYTHON UTILITIES
+# ------------------------------------------------------------
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# ------------------------------------------------------------
+# 13. .NET AND C# GENERATED FILES
+# ------------------------------------------------------------
+*.dll
+*.exe
+*.pdb
+*.cache
+
+# ------------------------------------------------------------
+# 14. TERRAFORM (OPTIONAL INFRASTRUCTURE SUPPORT)
+# ------------------------------------------------------------
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
